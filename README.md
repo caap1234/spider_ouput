@@ -15,5 +15,6 @@ $ ./spider_ouput.sh [Ruta de la carpeta del ouput de gospider]
 Quedaria asi
 
 ```
-▶ ./spider_ouput.sh /home/user/ouput 
+$ ./spider_ouput.sh /home/user/ouput 
+
 ```
