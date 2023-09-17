@@ -12,11 +12,11 @@ else
 		let "contador=$contador+1"
 	       var=$(awk NR==$contador /tmp/prueba1)
 		echo "$var" &
-		mkdir "$var"-Result >/dev/null 2>&1 &
-		cat $1/$var | grep href | awk '{print $3}' | tee $var-Result/href >/dev/null 2>&1 &
-		cat $1/$var | grep subdomains | awk '{print $3}' | tee $var-Result/subdomains >/dev/null 2>&1 &
-		cat $1/$var | grep linkfinder | awk '{print $4}' | tee $var-Result/linkfinder >/dev/null 2>&1 &
-		cat $1/$var | grep javascript | awk '{print $3}' | tee $var-Result/javascript >/dev/null 2>&1 &
+		mkdir "$var"-Result 2>/dev/null 2>&1 
+		cat $1/$var | grep href | awk '{print $3}' | tee $var-Result/href 2>/dev/null 2>&1 
+		cat $1/$var | grep subdomains | awk '{print $3}' | tee $var-Result/subdomains 2>/dev/null 2>&1 
+		cat $1/$var | grep linkfinder | awk '{print $4}' | tee $var-Result/linkfinder 2>/dev/null 2>&1 
+		cat $1/$var | grep javascript | awk '{print $3}' | tee $var-Result/javascript 2>/dev/null 2>&1 
 		#rm $1/$var >/dev/null 2>&1 &
 	done; 
 echo "borrando archivos"
